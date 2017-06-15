@@ -20,9 +20,16 @@ describe("Shopping List Class", function(){
     var jerky= new ShoppingListItem("jerky", "delicious");
     expect(jerky.description).to.equal("delicious");
   });
+
   it("should be finished", function(){
     var jerky= new ShoppingListItem("jerky", "delicious");
    jerky.finished.should.equal(false);
+  });
+
+  it("should have a method checked()", function(){
+    var jerky = new ShoppingListItem();
+    var result = jerky.checked();
+    expect(jerky.checked()).to.equal(true);
   });
 
 
