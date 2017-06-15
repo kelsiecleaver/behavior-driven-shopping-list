@@ -10,4 +10,10 @@ describe("Shopping List Class", function(){
   it('should be a function', function(){
     expect(shoppingListItem).to.be.a('function');
   });
+
+  it('should have property name', function(){
+  var jerky= new ShoppingListItem("Jerky")
+  expect(jerky.name).to.equal("Jerky")
+  })
+
 });
