@@ -20,8 +20,8 @@ describe("Shopping List Class", function(){
     var jerky= new ShoppingListItem("jerky", "delicious");
     expect(jerky.description).to.equal("delicious");
   })
-  it("should be finshed", function(){
-    var jerky= new ShoppingListItem("jerky", "delicious", "finshed");
+  it("should be finished", function(){
+    var jerky= new ShoppingListItem("jerky", "delicious", "finished");
     expect(jerky.finished).to.equal("finished");
   })
 
