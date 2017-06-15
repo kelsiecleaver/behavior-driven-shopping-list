@@ -21,10 +21,12 @@ describe("Shopping List Class", function(){
     expect(jerky.description).to.equal("delicious");
   });
 
+
   it("should be finished", function(){
     var jerky= new ShoppingListItem("jerky", "delicious");
    jerky.finished.should.equal(false);
   });
+
 
   it("should have a method checked()", function(){
     var jerky = new ShoppingListItem();
