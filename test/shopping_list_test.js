@@ -26,7 +26,6 @@ describe("Shopping List Class", function(){
     var jerky= new ShoppingListItem("jerky", "delicious");
    jerky.finished.should.equal(false);
   });
-
   it("should have a method checked()", function(){
     var jerky= new ShoppingListItem();
     expect(jerky.checked()).to.equal(true);
