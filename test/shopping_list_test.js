@@ -19,10 +19,11 @@ describe("Shopping List Class", function(){
   it("should have a description", function(){
     var jerky= new ShoppingListItem("jerky", "delicious");
     expect(jerky.description).to.equal("delicious");
-  })
-  it("should be finshed", function(){
-    var jerky= new ShoppingListItem("jerky", "delicious", "finshed");
-    expect(jerky.finished).to.equal("finished");
-  })
+  });
+  it("should be finished", function(){
+    var jerky= new ShoppingListItem("jerky", "delicious");
+   jerky.finished.should.equal(false);
+  });
+
 
 });
