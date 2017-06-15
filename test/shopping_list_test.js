@@ -12,8 +12,13 @@ describe("Shopping List Class", function(){
   });
 
   it('should have property name', function(){
-  var jerky= new ShoppingListItem("Jerky")
-  expect(jerky.name).to.equal("Jerky")
+  var jerky= new ShoppingListItem("Jerky");
+  expect(jerky.name).to.equal("Jerky");
+  });
+
+  it("should have a description", function(){
+    var delicious = new ShoppingListItem("delicious");
+    expect(delicious.description).to.equal("delicious");
   })
 
 });
