@@ -34,5 +34,11 @@ describe("Shopping List Class", function(){
     expect(jerky.checked()).to.equal(true);
   });
 
+    it("should have a method checked()", function(){
+      var jerky = new ShoppingListItem();
+      var result = jerky.checked();
+      expect(jerky.unchecked()).to.equal(false);
+    });
+
 
 });
