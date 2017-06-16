@@ -72,6 +72,9 @@ describe("Shopping List Item Class", function(){
         var donut= new ShoppingListItem("donut")
         expect(coffee.addItems(donut)).to.deep.equal(['donut'])
       });
+      it('should return an error', function(){
+        expect(coffee.addItems).to.throw(Error)
+      })
 
 
 
