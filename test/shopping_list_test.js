@@ -3,8 +3,9 @@ var expect = chai.expect;
 var should = chai.should();
 
 var ShoppingListItem  = require("../js/shopping_list_item.js");
+var ShoppingList= require("../js/shopping_list.js");
 
-describe("Shopping List Class", function(){
+describe("Shopping List Item Class", function(){
   var shoppingListItem = ShoppingListItem;
 
   it('should be a function', function(){
@@ -46,7 +47,14 @@ describe("Shopping List Class", function(){
     expect(jerky.render()).to.be.a("string");
     expect(jerky.render()).to.equal(`<li class="completed_${jerky.finished}"><span>${jerky.name}</span><span>${jerky.description}</span></li>`);
 
-
     });
-
 });
+    describe("Shopping List Class", function(){
+      var shoppingList= ShoppingList;
+
+      it('should be a function', function(){
+        expect(shoppingList).to.be.a('function');
+      });
+
+
+    })
