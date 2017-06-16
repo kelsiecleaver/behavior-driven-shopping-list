@@ -54,8 +54,8 @@ describe("Shopping List Item Class", function(){
       var shoppingList= ShoppingList;
       var coffee;
       beforeEach(function(){
-       coffee= new ShoppingList("Coffee")
-      })
+       coffee= new ShoppingList("Coffee");
+      });
 
       it('should be a function', function(){
         expect(shoppingList).to.be.a('function');
@@ -66,17 +66,51 @@ describe("Shopping List Item Class", function(){
       });
 
       it('should be a method', function(){
-        expect(coffee.addItems).to.be.a("function")
+        expect(coffee.addItems).to.be.a("function");
       });
       it('should add item into shoppingList', function(){
-        var donut= new ShoppingListItem("donut")
-        expect(coffee.addItems(donut)).to.deep.equal(['donut'])
+        var donut= new ShoppingListItem("donut");
+        expect(coffee.addItems(donut)).to.deep.equal(['donut']);
       });
       it('should return an error', function(){
-        expect(coffee.addItems).to.throw(Error)
-      })
+        expect(coffee.addItems).to.throw(Error);
+      });
+
+      it('should be a method', function(){
+        expect(coffee.removeItem).to.be.a('function');
+      });
+      it('should remove item from shoppingListItem', function(){
+        var donut = new ShoppingListItem('donut');
+        coffee.addItems(donut);
+        expect(coffee.removeItem(donut)).to.deep.equal([]);
+
+      });
+
+      it('should remove last item even without parameters', function(){
+        var donut = new ShoppingListItem('donut');
+        coffee.addItems(donut);
+        expect(coffee.removeItem()).to.deep.equal([]);
+      });
+      it('should return an error', function(){
+        expect(coffee.removeItem).to.throw(Error);
+      });
+
+      it('should be a method', function(){
+        expect(coffee.render).to.be.a('function');
+      });
+      it('should return a string', function(){
+        expect(coffee.render()).to.be.a('string');
+      });
+      it('should return ShoppingList', function(){
+        var donut = new ShoppingListItem('donut');
+        var bagel = new ShoppingListItem('bagel');
+        coffee.addItems(donut);
+        coffee.addItems(bagel);
+        expect(coffee.render()).to.equal(`<ul>${donut.name},${bagel.name}</ul>`);
+
+      });
 
 
 
 
-    })
+    });
