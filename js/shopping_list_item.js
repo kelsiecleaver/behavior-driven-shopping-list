@@ -11,8 +11,11 @@ checked(){
   return this.finished;
 }
 unchecked(){
-  this.finsihed = false;
-  return this.finsihed;
+  this.finished = false;
+  return this.finished;
+}
+render(){
+  return `<li class="completed_${this.finished}"><span>${this.name}</span><span>${this.description}</span></li>`
 }
 
 }

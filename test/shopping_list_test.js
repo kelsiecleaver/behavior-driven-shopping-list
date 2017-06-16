@@ -39,11 +39,12 @@ describe("Shopping List Class", function(){
       var result = jerky.checked();
       expect(jerky.unchecked()).to.equal(false);
     });
+
     it('should have a method render, should be a string', function(){
-      var jerky = new ShoppingListItem();
+      var jerky = new ShoppingListItem("jerky","delicious");
+          expect(jerky.render).to.be.a("function");
     expect(jerky.render()).to.be.a("string");
-    expect(jerky.render()).to.be.a("function");
-    expect(jerky.render()).to.equal(`<li class="completed_${jerky.finished}"><span>{$jerky.name}</span> <span>{$jerky.description}</span></li> <li class="completed_false"><span>Avocado</span> <span>Must be eaten immediately.</span></li>`);
+    expect(jerky.render()).to.equal(`<li class="completed_${jerky.finished}"><span>${jerky.name}</span><span>${jerky.description}</span></li>`);
 
 
     });
