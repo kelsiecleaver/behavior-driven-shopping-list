@@ -10,6 +10,10 @@ checked(){
   this.finished = true;
   return this.finished;
 }
+unchecked(){
+  this.finsihed = false;
+  return this.finsihed;
+}
 
 }
 module.exports=ShoppingListItem;
