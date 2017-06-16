@@ -31,13 +31,11 @@ describe("Shopping List Item Class", function(){
 
   it("should have a method checked()", function(){
     var jerky = new ShoppingListItem();
-    var result = jerky.checked();
     expect(jerky.checked()).to.equal(true);
   });
 
     it("should have a method checked()", function(){
       var jerky = new ShoppingListItem();
-      var result = jerky.checked();
       expect(jerky.unchecked()).to.equal(false);
     });
 
@@ -49,12 +47,33 @@ describe("Shopping List Item Class", function(){
 
     });
 });
+
+
+
     describe("Shopping List Class", function(){
       var shoppingList= ShoppingList;
+      var coffee;
+      beforeEach(function(){
+       coffee= new ShoppingList("Coffee")
+      })
 
       it('should be a function', function(){
         expect(shoppingList).to.be.a('function');
       });
+
+      it('should have property named item that is initialized as an empty array', function(){
+      expect(coffee.item).to.be.an("Array");
+      });
+
+      it('should be a method', function(){
+        expect(coffee.addItems).to.be.a("function")
+      });
+      it('should add item into shoppingList', function(){
+        var donut= new ShoppingListItem("donut")
+        expect(coffee.addItems(donut)).to.deep.equal(['donut'])
+      });
+
+
 
 
     })
