@@ -7,7 +7,7 @@ class ShoppingList{
   addItems(item){
     if(item instanceof ShoppingListItem){
       this.item.push(item.name);
-      console.log(this.item)
+      console.log(this)
       return this.item;
     }else{
       throw new Error("ERROR");
