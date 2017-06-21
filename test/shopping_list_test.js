@@ -110,7 +110,8 @@ describe("Shopping List Item Class", function(){
 
       });
 
-
-
-
     });
+
+
+
+
