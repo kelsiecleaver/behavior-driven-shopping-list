@@ -1,9 +1,7 @@
-var chai = require("chai");
 var expect = chai.expect;
 var should = chai.should();
 
-var ShoppingListItem  = require("../js/shopping_list_item.js");
-var ShoppingList= require("../js/shopping_list.js");
+
 
 describe("Shopping List Item Class", function(){
   var shoppingListItem = ShoppingListItem;

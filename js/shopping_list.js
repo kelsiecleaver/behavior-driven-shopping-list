@@ -1,4 +1,4 @@
-var ShoppingListItem  = require("../js/shopping_list_item.js");
+
 class ShoppingList{
   constructor(){
     this.item=[];
@@ -37,4 +37,3 @@ removeItem(item){
 
 
 
-module.exports=ShoppingList;

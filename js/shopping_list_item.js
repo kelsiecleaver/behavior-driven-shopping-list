@@ -24,4 +24,4 @@ render(){
 
 
 
-module.exports=ShoppingListItem;
+
