@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/mocha/mocha.css">
 </head>
 <body>
-
-<div id="content">
-<input type="text" value="title">
-<input type="text" value="description">
-<button id="add_shopping_list_item_button">Add to Shopping List</button>
-</div>
-<script src="js/shopping_list.js" charset = 'utf-8'></script>
-<script src="js/shopping_list_item.js" charset = 'utf-8'></script>
-<script src="test/shopping_list_test.js" charset = 'utf-8'></script>
+<div id="mocha"></div>
+<script src = "human.js" charset = 'utf-8'></script>
+<script src="node_modules/mocha/mocha.js" charset="utf-8"></script>
+<script src="node_modules/chai/chai.js" charset="utf-8"></script>
+<script charset ="utf-8">
+mocha.setup('bdd') ;
+</script>
+<script src = "test/human.spec.js" charset = "utf-8"></script>
+<script charset = 'utf-8'>
+mocha.run();
+</script>
 </body>
 </html>

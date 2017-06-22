@@ -26,6 +26,7 @@ removeItem(item){
       throw new Error("ERROR");
     }
   }
+
   render(item){
      console.log(this.item);
     return `<ul>${this.item.toString()}</ul>`
