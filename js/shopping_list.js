@@ -1,13 +1,13 @@
 
 class ShoppingList{
-  constructor(){
-    this.item=[];
-
+  constructor(item, description){
+    this.item = [];
+    this.description = [];
   }
   addItems(item){
     if(item instanceof ShoppingListItem){
       this.item.push(item.name);
-      console.log(this)
+
       return this.item;
     }else{
       throw new Error("ERROR");
@@ -26,12 +26,19 @@ removeItem(item){
       throw new Error("ERROR");
     }
   }
-  render(item){
-     console.log(this.item);
-    return `<ul>${this.item.toString()}</ul>`
+  // render(item){
+  //    console.log(this.item);
+  //   return `<ul>${this.item.toString()}</ul>`
 
-  }
+  // }
 
+ render(){
+     var rendList = "";
+     for (var i = 0; i < this.item.length; i++){
+      rendList += this.item[i];
+     }
+     return `<ul>${rendList}</ul>`
+     }
 }
 
 

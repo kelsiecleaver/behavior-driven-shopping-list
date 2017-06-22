@@ -60,7 +60,7 @@ describe("Shopping List Item Class", function(){
       });
 
       it('should have property named item that is initialized as an empty array', function(){
-      expect(coffee.item).to.be.an("Array");
+      expect(coffee.items).to.be.an("Array");
       });
 
       it('should be a method', function(){
