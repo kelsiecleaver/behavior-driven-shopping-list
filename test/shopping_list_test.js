@@ -54,7 +54,7 @@ describe("Shopping List Item Class", function(){
       var shoppingList= ShoppingList;
       var coffee;
       beforeEach(function(){
-       coffee= new ShoppingList("Coffee");
+       coffee = new ShoppingList("Coffee");
       });
 
       it('should be a function', function(){
@@ -69,7 +69,7 @@ describe("Shopping List Item Class", function(){
         expect(coffee.addItems).to.be.a("function");
       });
       it('should add item into shoppingList', function(){
-        var donut= new ShoppingListItem("donut");
+        var donut = new ShoppingListItem("donut");
         expect(coffee.addItems(donut)).to.deep.equal(['donut']);
       });
       it('should return an error', function(){
