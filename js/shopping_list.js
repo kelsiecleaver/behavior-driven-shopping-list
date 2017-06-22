@@ -6,7 +6,7 @@ class ShoppingList{
   }
   addItems(item){
     if(item instanceof ShoppingListItem){
-      this.item.push(item.name);
+      this.item.push(item);
 
       return this.item;
     }else{
@@ -31,7 +31,7 @@ removeItem(item){
  render(){
      var rendList = "";
      for (var i = 0; i < this.item.length; i++){
-      rendList += this.item[i];
+      rendList += this.item[i].render();
      }
      return `<ul>${rendList}</ul>`
      }
