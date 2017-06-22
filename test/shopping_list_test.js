@@ -1,9 +1,9 @@
 
+
 var expect = chai.expect;
 var should = chai.should();
 
-var ShoppingListItem  = require("../js/shopping_list_item.js");
-var ShoppingList= require("../js/shopping_list.js");
+
 
 describe("Shopping List Item Class", function(){
   var shoppingListItem = ShoppingListItem;
@@ -62,7 +62,7 @@ describe("Shopping List Item Class", function(){
       });
 
       it('should have property named item that is initialized as an empty array', function(){
-      expect(coffee.item).to.be.an("Array");
+      expect(coffee.items).to.be.an("Array");
       });
 
       it('should be a method', function(){

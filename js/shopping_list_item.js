@@ -1,9 +1,9 @@
 class ShoppingListItem{
 
-  constructor(name, description) {
+  constructor(name, description, finished) {
     this.name = name;
     this.description= description;
-    this.finished= false;
+    this.finished= finished;
 }
 
 checked(){
@@ -24,4 +24,4 @@ render(){
 
 
 
-module.exports=ShoppingListItem;
+

@@ -1,13 +1,13 @@
-var ShoppingListItem  = require("../js/shopping_list_item.js");
-class ShoppingList{
-  constructor(){
-    this.item=[];
 
+class ShoppingList{
+  constructor(item, description){
+    this.item = [];
+    this.description = [];
   }
   addItems(item){
     if(item instanceof ShoppingListItem){
       this.item.push(item.name);
-      console.log(this)
+
       return this.item;
     }else{
       throw new Error("ERROR");
@@ -27,15 +27,13 @@ removeItem(item){
     }
   }
 
-  render(item){
-     console.log(this.item);
-    return `<ul>${this.item.toString()}</ul>`
 
-  }
+ render(){
+     var rendList = "";
+     for (var i = 0; i < this.item.length; i++){
+      rendList += this.item[i];
+     }
+     return `<ul>${rendList}</ul>`
+     }
 
 }
-
-
-
-
-module.exports=ShoppingList;
