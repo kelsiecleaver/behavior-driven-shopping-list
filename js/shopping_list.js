@@ -4,6 +4,7 @@ class ShoppingList{
     this.item = [];
     this.description = [];
   }
+  
   addItems(item){
     if(item instanceof ShoppingListItem){
       this.item.push(item.name );
