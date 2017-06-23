@@ -24,7 +24,7 @@ describe("Shopping List Item Class", function(){
 
 
   it("should be finished", function(){
-    var jerky= new ShoppingListItem("jerky", "delicious");
+    var jerky = new ShoppingListItem("jerky", "delicious");
    jerky.finished.should.equal(false);
   });
 
@@ -62,7 +62,7 @@ describe("Shopping List Item Class", function(){
       });
 
       it('should have property named item that is initialized as an empty array', function(){
-      expect(coffee.items).to.be.an("Array");
+      expect(coffee.item).to.be.an("Array");
       });
 
       it('should be a method', function(){
