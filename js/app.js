@@ -15,13 +15,17 @@ function addToShoppingList(){
 
 var title = document.getElementById("title").value;
 var description = document.getElementById("description").value;
-var newShoppingListItem = new ShoppingListItem(title, description);
-newList.addItems(newShoppingListItem);
-rendAgain = newList.render();
-renderBox.innerHTML = rendAgain;
 
-console.log(description);
+var newItem = new ShoppingListItem(title, description);
+newList.addItems(newItem);
+renderBox.innerHTML = newList.render();
 
+var allItems = document.querySelectorAll(' .grocery-item input');
+for(var i = 0; i< allItems.length; i++){
+  allItems[i].addEventListener('change', function (event){
+    var itemId = event.target.parentNode.id;
+    newList.item[itemId].checked();
 }
+};
 
 

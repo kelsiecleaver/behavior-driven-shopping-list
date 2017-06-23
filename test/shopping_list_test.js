@@ -103,9 +103,9 @@ describe("Shopping List Item Class", function(){
       });
       it('should return ShoppingList', function(){
         var donut = new ShoppingListItem('donut');
-        var bagel = new ShoppingListItem('bagel');
+
         coffee.addItems(donut);
-        coffee.addItems(bagel);
+
         expect(coffee.render()).to.equal(`<ul>${donut.name},${bagel.name}</ul>`);
 
       });
