@@ -102,11 +102,10 @@ describe("Shopping List Item Class", function(){
         expect(coffee.render()).to.be.a('string');
       });
       it('should return ShoppingList', function(){
-        var donut = new ShoppingListItem('donut');
-        var bagel = new ShoppingListItem('bagel');
+        var donut = new ShoppingListItem('donut','tasty',false);
         coffee.addItems(donut);
-        coffee.addItems(bagel);
-        expect(coffee.render()).to.equal(`<ul>${donut.name},${bagel.name}</ul>`);
+
+        expect(coffee.render()).to.equal(`<ul><li class="completed_${donut.finished}"><span>${donut.name}</span><span>${donut.description}</span></li></ul>`);
 
       });
 
