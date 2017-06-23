@@ -106,7 +106,7 @@ describe("Shopping List Item Class", function(){
 
         coffee.addItems(donut);
 
-        expect(coffee.render()).to.equal(`<ul>${donut.name},${bagel.name}</ul>`);
+        expect(coffee.render()).to.equal(`<ul>${donut.name}</ul>`);
 
       });
 

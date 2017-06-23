@@ -6,7 +6,7 @@ class ShoppingList{
   }
   addItems(item){
     if(item instanceof ShoppingListItem){
-      this.item.push(item);
+      this.item.push(item.name );
 
       return this.item;
     }else{
